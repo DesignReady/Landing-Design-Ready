@@ -1093,14 +1093,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ═══════════════ SELECTOR PLANTAS ═══════════════ -->
 <div class="plantas" id="proyectos">
-    <div class="planta-blk" onclick="location.href='#sec-dos-plantas'">
+    <div class="planta-blk" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'clic_categoria_plantas',categoria:'dos_plantas'}); location.href='#sec-dos-plantas'">
         <img src="fotos/NF_CasaAgustina_Corr-10_1_FTE-IZQ_PP.jpg" alt="Casas de dos plantas" loading="lazy">
         <div class="planta-content">
             <h3 class="planta-title">Casas de<br>Dos Plantas</h3>
             <span class="planta-link">Explorar ahora →</span>
         </div>
     </div>
-    <div class="planta-blk" onclick="location.href='#sec-una-planta'">
+    <div class="planta-blk" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'clic_categoria_plantas',categoria:'una_planta'}); location.href='#sec-una-planta'">
         <img src="fotos/NF_CasaCeleste_Corr-17_05_Ctrafrente_pp.jpg" alt="Casas de una planta" loading="lazy">
         <div class="planta-content">
             <h3 class="planta-title">Casas de<br>Una Planta</h3>
@@ -1441,7 +1441,7 @@ function makeCard(h) {
                 <div class="hstat"><div class="hstat-val">${h.floors}</div><div class="hstat-lbl">Plantas</div></div>
             </div>
             <div class="price">U$S ${h.price.toLocaleString()}</div>
-            <a href="${'https://wa.me/5491139073552?text=' + encodeURIComponent('Hola! Me interesa el proyecto ' + h.name + '. ¿Podés darme más información?')}" target="_blank" class="btn-gold">Consultar por WhatsApp</a>
+            <a href="${'https://wa.me/5491139073552?text=' + encodeURIComponent('Hola! Me interesa el proyecto ' + h.name + '. ¿Podés darme más información?')}" target="_blank" class="btn-gold" data-casa="${h.name}">Consultar por WhatsApp</a>
         </div>
     </div>`;
 }
