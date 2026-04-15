@@ -11,9 +11,9 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Ready — Casas con alma | Proyectos listos para construir</title>
-    <meta name="description" content="Proyectos de casas completos, diseñados por arquitectos con más de 15 años de experiencia. Planos, renders, electricidad y sanitarios incluidos. Descargá y empezá a construir.">
-    <meta name="keywords" content="planos de casas, proyectos de casas, casas listas para construir, arquitectura, design ready, planos arquitectónicos, renders de casas">
+    <title>Design Ready | Proyectos de casas listos para construir en Argentina</title>
+    <meta name="description" content="Proyectos de casas completos con planos, renders, electricidad y sanitarios incluidos. Precio fijo, diseño de arquitecto. Descargá hoy y empezá a construir sin esperar meses.">
+    <meta name="keywords" content="planos de casas Argentina, proyectos de casas para construir, comprar planos arquitectónicos, proyecto arquitectónico completo, casas modernas planos Argentina, casas clásicas planos, planos aprobados municipio Argentina, proyecto de casa llave en mano, design ready, renders de casas Argentina, casas dos plantas planos, documentación técnica construcción">
     <meta name="author" content="Design Ready">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.designreadybynf.com/" />
@@ -24,8 +24,8 @@
     <meta name="google-site-verification" content="o_kI70ECO5xbJ2KGNU8xTnAKcJMlPkzwLMJPJTKxtSQ" />
     
     <!-- Open Graph (WhatsApp, Facebook, etc) -->
-    <meta property="og:title" content="Design Ready — Casas con alma">
-    <meta property="og:description" content="Proyectos arquitectónicos completos, listos para descargar y construir. Diseño de autor, sin esperar meses.">
+    <meta property="og:title" content="Design Ready | Proyectos de casas listos para construir">
+    <meta property="og:description" content="Planos, renders y documentación técnica completa. Precio fijo. Diseñado por arquitectos. Descargá y empezá a construir hoy.">
     <meta property="og:image" content="fotos/D- Design Ready logo Ok-17.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
@@ -1489,6 +1489,19 @@ function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
     document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
 }
+
+// ─── WHATSAPP CLICK TRACKING ───
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href*="wa.me"]');
+    if (!link) return;
+    const casa = link.dataset.casa || 'general';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: 'whatsapp_click',
+        whatsapp_source: casa,
+        whatsapp_url: link.href
+    });
+});
 </script>
 </body>
 </ht
